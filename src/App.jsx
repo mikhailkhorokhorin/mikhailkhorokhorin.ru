@@ -2,17 +2,15 @@ import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
-
-import './App.css';
 import TerminalHeader from './components/TerminalHeader';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Links from './components/Links';
+import './App.css';
 
 const asciiSymbols = ['*', '#', '@', '%', '&', '+', '='];
 
-// HOC для анимации появления
 const withFadeIn = (WrappedComponent) => {
   return function AnimatedComponent(props) {
     return (
@@ -28,7 +26,6 @@ const withFadeIn = (WrappedComponent) => {
   };
 };
 
-// Оборачиваем компоненты в анимацию
 const AnimatedTerminalHeader = withFadeIn(TerminalHeader);
 const AnimatedAbout = withFadeIn(About);
 const AnimatedExperience = withFadeIn(Experience);
@@ -40,18 +37,15 @@ export default function App() {
   const {i18n} = useTranslation();
   const location = useLocation();
 
-  // Меняем язык по URL
   useEffect(() => {
     if (location.pathname.startsWith('/ru')) i18n.changeLanguage('ru');
     else i18n.changeLanguage('en');
   }, [location.pathname, i18n]);
 
-  // Обработка клика для ASCII эффектов
   const handleClick = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const baseX = e.clientX - rect.left;
     const baseY = e.clientY - rect.top;
-
     const clusterSize = 7;
     const radiusPx = 20;
     const newEffects = [];
@@ -63,7 +57,6 @@ export default function App() {
       const y = baseY + r * Math.sin(angle);
       const symbol = asciiSymbols[Math.floor(Math.random() * asciiSymbols.length)];
       const id = Date.now() + i;
-
       newEffects.push({id, x, y, symbol});
     }
 
@@ -77,10 +70,7 @@ export default function App() {
   return (
     <div className="fullscreen-wrapper" onClick={handleClick}>
       <Routes>
-        {/* Редирект с корня на русский */}
         <Route path="/" element={<Navigate to="/ru" replace/>}/>
-
-        {/* Главная страница с мультиязычной поддержкой */}
         <Route
           path="/:lang"
           element={
@@ -95,7 +85,6 @@ export default function App() {
         />
       </Routes>
 
-      {/* ASCII эффекты клика */}
       {effects.map(({id, x, y, symbol}) => (
         <span
           key={id}
