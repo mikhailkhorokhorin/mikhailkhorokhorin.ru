@@ -1,0 +1,52 @@
+{
+  "about": {
+    "title": "About Me",
+    "description": "Backend developer with over one year of experience. Involved in the full lifecycle of backend development: **API design, business logic implementation, and database management**. Experienced in leading a small team at a startup, responsible for task planning, code review, and coordinating development."
+  },
+  "experience": {
+    "title": "Experience",
+    "list": [
+      {
+        "company": "Oriole Startup",
+        "position": "Team Lead & Python Backend Developer",
+        "start": "February 2025",
+        "end": "August 2025",
+        "duration": "7 months"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "list": [
+      {
+        "title": "Oriole",
+        "url": "https://github.com/GoatWhistle/oriole"
+      },
+      {
+        "title": "Developer Library",
+        "url": "https://github.com/mikhailkhorokhorin/developer-library"
+      }
+    ]
+  },
+  "links": {
+    "title": "Links",
+    "list": [
+      {
+        "title": "E-mail",
+        "url": "mailto:mikhailkhorokhorin@gmail.com"
+      },
+      {
+        "title": "Telegram",
+        "url": "https://t.me/mikhailkhorokhorin"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/mikhailkhorokhorin"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/mikhailkhorokhorin"
+      }
+    ]
+  }
+}

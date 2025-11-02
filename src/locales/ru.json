@@ -1,0 +1,52 @@
+{
+  "about": {
+    "title": "Обо мне",
+    "description": "Бэкенд-разработчик с опытом работы более года. Участвую в полном цикле создания серверной части: **проектирование API, реализация бизнес-логики и работа с БД**. Имею опыт руководства небольшой командой в стартапе, где отвечал за планирование задач, ревью кода и координацию разработки."
+  },
+  "experience": {
+    "title": "Опыт работы",
+    "list": [
+      {
+        "company": "Стартап Oriole",
+        "position": "Team Lead & Python Backend Developer",
+        "start": "Февраль 2025",
+        "end": "Август 2025",
+        "duration": "7 месяцев"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Проекты",
+    "list": [
+      {
+        "title": "Oriole",
+        "url": "https://github.com/GoatWhistle/oriole"
+      },
+      {
+        "title": "Developer Library",
+        "url": "https://github.com/mikhailkhorokhorin/developer-library"
+      }
+    ]
+  },
+  "links": {
+    "title": "Ccылки",
+    "list": [
+      {
+        "title": "Почта",
+        "url": "mailto:mikhailkhorokhorin@gmail.com"
+      },
+      {
+        "title": "Telegram",
+        "url": "https://t.me/mikhailkhorokhorin"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/mikhailkhorokhorin"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/mikhailkhorokhorin"
+      }
+    ]
+  }
+}
