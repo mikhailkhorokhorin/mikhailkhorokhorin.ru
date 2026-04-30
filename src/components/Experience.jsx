@@ -1,18 +1,16 @@
-import {useTranslation} from 'react-i18next';
-import {slugify} from '../utils/slugify';
+import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
-  const {t} = useTranslation();
-
-  const list = t('experience.list', {returnObjects: true}); // массив объектов из JSON
+  const { t } = useTranslation();
+  const list = t('experience.list', { returnObjects: true });
 
   return (
     <section className="section experience">
-      <h2>{'> ' + slugify(t('experience.title'))}</h2>
+      <h2>$ cat experience.log</h2>
       <ul>
         {list.map((item, index) => (
           <li key={index}>
-            <strong>{item.position}</strong> @ {item.company} ({item.start} – {item.end})<br/>
+            <strong>{item.position}</strong> @ {item.company} ({item.start} – {item.end})<br />
             <em>{item.duration}</em>
           </li>
         ))}

@@ -1,20 +1,17 @@
-import {useTranslation} from 'react-i18next';
-import {slugify} from '../utils/slugify';
+import { useTranslation } from 'react-i18next';
+import TerminalLink from './TerminalLink';
 
 export default function Links() {
-  const {t} = useTranslation();
-
-  const links = t('links.list', {returnObjects: true});
+  const { t } = useTranslation();
+  const links = t('links.list', { returnObjects: true });
 
   return (
     <section className="section links">
-      <h2>{'> ' + slugify(t('links.title'))}</h2>
+      <h2>$ cat contacts.txt</h2>
       <ul>
         {links.map((link, i) => (
           <li key={i}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
-              {link.title}
-            </a>
+            <TerminalLink href={link.url}>{link.title}</TerminalLink>
           </li>
         ))}
       </ul>
